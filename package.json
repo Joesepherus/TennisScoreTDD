@@ -1,0 +1,21 @@
+{
+  "name": "tdd2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run transpile && jest ./dist/index.spec.js",
+    "transpile": "babel src --out-dir dist",
+    "start": "node ./dist/index.js"
+  },
+  "author": "Joesepherus",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^26.6.3"
+  },
+  "dependencies": {
+    "@babel/cli": "^7.13.10",
+    "@babel/core": "^7.13.10",
+    "@babel/preset-env": "^7.13.12"
+  }
+}
