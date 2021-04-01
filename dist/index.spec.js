@@ -30,6 +30,52 @@ describe("Tennis Scoring Tests", () => {
     (0, _index.opponentScores)();
     expect((0, _index.getScore)()).toBe("40 - 30");
   });
+  test("Server scores 3 times and Opponent scores 3 times.", () => {
+    (0, _index.startTennisMatch)();
+    (0, _index.serverScores)();
+    (0, _index.serverScores)();
+    (0, _index.serverScores)();
+    (0, _index.opponentScores)();
+    (0, _index.opponentScores)();
+    (0, _index.opponentScores)();
+    expect((0, _index.getScore)()).toBe("Deuce");
+  });
+  test("Server scores 3 times and Opponent scores 4 times.", () => {
+    (0, _index.startTennisMatch)();
+    (0, _index.serverScores)();
+    (0, _index.serverScores)();
+    (0, _index.serverScores)();
+    (0, _index.opponentScores)();
+    (0, _index.opponentScores)();
+    (0, _index.opponentScores)();
+    (0, _index.opponentScores)();
+    expect((0, _index.getScore)()).toBe("Advantage - Opponent");
+  });
+  test("Server scores 3 times and Opponent scores 5 times.", () => {
+    (0, _index.startTennisMatch)();
+    (0, _index.serverScores)();
+    (0, _index.serverScores)();
+    (0, _index.serverScores)();
+    (0, _index.opponentScores)();
+    (0, _index.opponentScores)();
+    (0, _index.opponentScores)();
+    (0, _index.opponentScores)();
+    (0, _index.opponentScores)();
+    expect((0, _index.getScore)()).toBe("Game - Opponent");
+  });
+  test("Server scores 3 times and Opponent scores 6 times.", () => {
+    (0, _index.startTennisMatch)();
+    (0, _index.serverScores)();
+    (0, _index.serverScores)();
+    (0, _index.serverScores)();
+    (0, _index.opponentScores)();
+    (0, _index.opponentScores)();
+    (0, _index.opponentScores)();
+    (0, _index.opponentScores)();
+    (0, _index.opponentScores)();
+    (0, _index.opponentScores)();
+    expect((0, _index.getScore)()).toBe("Game is already over. You can't score anymore.");
+  });
   test("Server scores 4 times", () => {
     (0, _index.startTennisMatch)();
     (0, _index.serverScores)();
